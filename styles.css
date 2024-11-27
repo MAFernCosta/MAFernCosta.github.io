@@ -181,9 +181,6 @@
   footer > span{
     text-align: justify;
   }
-  footer > a{
-    
-  }
   
   @media (max-width: 30em) {
     footer {

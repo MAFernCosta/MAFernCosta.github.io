@@ -1,0 +1,62 @@
+:root{
+    --background:#ECEFF1;
+    --textcolor:#212121;
+    --primarybox:#CFD8DC;
+    --secondarybox:#BBDEFB;
+    --vibrantcolor:#FF7043;
+  
+  }
+  
+  body{
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+    color:var(--textcolor);
+  
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--background);
+  }
+  #text-input, #check-btn, body{
+    font-size:18px;
+  }
+  
+  h1{
+    text-align:center;
+  }
+  
+  .box{
+    text-align:center;
+    background-color: var(--primarybox);
+    border-radius:20px;
+    padding:20px 40px;
+    width:300px;
+  }
+  
+  label{
+    display:block;
+  }
+  
+  #text-input{
+    margin:20px 0;
+    background-color:var(--primarybox);
+    border:none;
+    border-bottom:1px solid var(--vibrantcolor);
+  }
+  
+  #check-btn{
+    background-color:var(--vibrantcolor);
+    color:white;
+    padding:4px 18px;
+    border:none;
+    border-radius:5px;
+  }
+  
+  #hintbox{
+    text-align:justify;
+    background-color:var(--secondarybox);
+    margin-top:25px;
+  }
+  

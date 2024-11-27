@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+  <head> 
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css" />
+    <title>Survey form</title>
+  </head>
+  <body>
+    <h1 id="title"> Survey Form </h1>
+    <p id="description">Thank you for taking the time to help us improve the platform</p>
+    <form id="survey-form" method="post" action='#'>
+      <label id="name-label" for="name-input">Name <input placeholder="Enter your name"id="name" name="name-input" type="text" required></label>
+      <label id="email-label" for="email-input">Email <input placeholder="Enter your email"id="email" type="email" name="email-input" required></label>
+      <label id="number-label" for="number-input" >Age (optional)<input placeholder="Enter your age" id="number" type="number" min="10" max="120" name="number-input" required></label>
+    <label for="dropdown">Which option best describes your current role?
+<select id="dropdown"> 
+    <option value=""disabled selected value>Select current role</option>
+      <option value="student">Student</option>
+      <option value="Full time Job">Full time Job</option>
+    </select>
+    </label>
+    <legend>Would you recommend to a friend?</legend>
+    <label for="recommend-definitely">
+    <input class="inline"  id="recommend" type="radio" value="definitely" name="recommend-radio" checked >Definitely</input>
+    </label>
+    <label  for="recommend-maybe">
+    <input class="inline"  id="recommend" type="radio" value="maybe" name="recommend-radio" >Maybe</input>
+    </label>
+    <label for="recommend-notsure">
+    <input class="inline" id="recommend" type="radio" value="notsure" name="recommend-radio">Not sure</input>
+    </label>
+    <label>What would you like to see improved? (Check all that apply)</label>
+    <label for="frontend-checkbox">
+    <input class="inline" name="frontend-checkbox" type="checkbox" value="frontendprojects">
+    Front-end projects</label>
+    <label for="backend-checkbox">
+    <input class="inline" name="backend-checkbox" type="checkbox" value="backendprojects">
+    Back-end projects</label>
+    <label for="datavisualisation-checkbox">
+    <input class="inline" name="datavisualisation-checkbox" type="checkbox" value="datavisualization">
+    Data Visualization</label>
+    <label for="comments-textarea">Any comments or suggestions?
+      <textarea rows="5" cols="30"name="comments-textarea" placeholder="Place your comments here..." ></textarea>
+      </label>
+<input id="submit" type="submit" value="Submit">
+    </form>
+  </body>
+</html>

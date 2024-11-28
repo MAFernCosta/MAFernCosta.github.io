@@ -1,0 +1,64 @@
+:root{
+    --background:#FFFBEB;
+    --appbackground:#FFE4B5;
+    --btncolor:#FF6F61;
+    --darkcolor:#FFB347;
+    --errorbackground:#FF4C4C;
+    --fontcolor:#333333;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+    background-color: var(--background);
+    text-align: center;
+    padding-top: 100px;
+    color: var(--fontcolor);
+}
+.txt, .out, .btn{
+    border: 3px solid var(--darkcolor);
+    font-size: 17px;
+}
+.app{
+    width: 300px;
+    border: 4px solid var(--darkcolor);
+    text-align: center;
+    background-color: var(--appbackground);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 25px;
+}
+
+.lbl{
+    display: block;
+    font-weight:bold;
+}
+
+.txt{
+    background-color: var(--background);
+    width: 235px;
+    height: 18px;
+    padding: 5px;  
+    text-align: center;  
+}
+#output, .btn{
+    width: 250px;
+}
+.btn{
+    display: block;
+    background-color: var(--btncolor);
+    margin: 10px auto 0 auto;
+    padding: 5px 0;
+}
+.out{
+    display: block;
+    padding: 10px 0;
+    min-height: 25px;
+    margin: 20px auto 0 auto;
+    background-color: var(--background);
+}
+.hidden{
+    display: none;
+}
+.errormsg{
+    background-color: var(--errorbackground);
+}

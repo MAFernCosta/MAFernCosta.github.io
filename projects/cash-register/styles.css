@@ -1,0 +1,108 @@
+:root{
+    --background:#FDFAF6;
+    --textcolor:#212121;
+    --primarybox:#FAF1E6;
+    --secondarybox:#BBDEFB;
+    --vibrantcolor:#FF7043;
+  
+}
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+body{
+    background-color: var(--background);
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+    color:var(--textcolor);
+}
+main{
+    
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    min-height: calc(100vh - 50px) /* you have to minus header and footer width */
+}
+
+.input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:500px; 
+}
+
+.change{
+    margin-bottom: 20px;
+}
+
+.ipt{
+    border-radius: 3px;
+    border: solid 1px var(--textcolor);
+    padding: 5px;
+    margin: 10px;
+    font-size: 16px;
+}
+
+.btn{
+    background-color:var(--vibrantcolor);
+    color:var(--textcolor);
+    font-weight: bold;
+    font-size: 20px;
+    padding:12px 40px;
+    border:none;
+    border-radius:5px;
+ }
+
+ .register{
+    margin-top: 40px;
+    width: 500px;
+ }
+
+.register-total{
+    text-align: center;
+    padding: 12px 30px;
+    background-color: var(--textcolor);
+    color: var(--background);
+    width:90px;
+    height: 18px;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid 10px var(--secondarybox);
+}
+
+.register-body, .register-drawer{
+    margin-left: 30px;
+    margin-right: 30px;
+    background-color: var(--secondarybox);
+}
+
+.register-body{
+    padding-left:100px ;
+    border-radius: 30px 30px 0 0;
+    padding: 10px;
+}
+
+.register-drawer{
+    text-align: center;
+    margin-top: 10px;
+    padding: 15px;
+    font-weight: bold;
+}
+
+.register-change{
+    margin: 15px 60px 5px 60px;
+    padding: 10px;
+    background-color: var(--primarybox);
+    border-radius: 5px;
+}
+
+footer{  
+    height: 50px;            /* calc height when limited content */
+    background-color: #E4EFE7;
+}
+.footer-content{
+    padding-left: 25px;
+}

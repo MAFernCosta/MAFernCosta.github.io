@@ -3,20 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"/>
     <title>Cash Register</title>
+
 </head>
 <body>
-    <p id="change-due"></p>
-    <div id="input">
-        <label for="cash">Enter cash from Customer:</label>
-        <input type="number" id="cash" required>
-        <button id="purchase-btn" >Pay</button>
-    </div>
-    <label for="price" >Price: </label>
-    <span id="price"></span>
-    <div id="change-drawer"></div>
-    <label for="total-cash-in-drawer">Total:</label>
-    <span id="total-cash-in-drawer"></span>
-    <script src="script.js"></script>
+    <main>
+        <h1>Cash Register Project</h1>
+        
+        <div class="input">
+            <div id="change-due" class="change" ></div>
+            <label for="cash">Enter cash from Customer:</label>
+            <input type="number" id="cash" class="ipt" required>
+            <button id="purchase-btn" class="btn">Pay</button>
+        </div>
+        <div class="register">
+            <div class="register-total">
+                <label for="price" >Total: </label>
+                <span id="price" class="register-price"></span>
+            </div>
+            <div class="register-body">
+                <div class="register-change">
+                    <label>Change in drawer:</label>
+                    <div id="change-drawer"></div>
+                </div>
+            </div>
+            <div class="register-drawer">
+                <label for="total-cash-in-drawer" >Total change in drawer:</label>
+                <span id="total-cash-in-drawer"></span>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </main>
+    <footer>
+        <span class="footer-content">Miguel Costa 17-12-24</span>
+    </footer>
 </body>
 </html>

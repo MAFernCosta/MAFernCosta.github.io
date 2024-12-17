@@ -10,15 +10,12 @@ let cid = [
   ['TWENTY', 60],
   ['ONE HUNDRED', 100]
 ];
-//[["PENNY", 0.5], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 0], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]];
-//[["PENNY", 0.01], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 0], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]];
 
 const cashElement = document.getElementById("cash");
 const changeDrawerElement = document.getElementById("change-drawer");
 const changeDueElement = document.getElementById("change-due");
 const payBtn = document.getElementById("purchase-btn");
 const priceElement = document.getElementById("price");
-priceElement.textContent = price;
 const totalCashInDrawerElement = document.getElementById("total-cash-in-drawer");
 
 const curr = [
@@ -33,97 +30,84 @@ const curr = [
   ["One Hundred Dollars", 100]
 ];
 
+let cash = 0;
 
-class Money{
-   constructor(currecyUnit, value, name, amount) {
-    this.currecyUnit = currecyUnit;
-    this.value = value;
-    this.name = name;
-    this.amount = amount;
-  }
+const listCid = () => {
+    changeDrawerElement.innerHTML = "";
+    cid.forEach((item) => changeDrawerElement.innerHTML += `${item[0]}: $${item[1]} <br>`);
 }
 
+const totalInCid = ()=> Math.round(cid.reduce((total, currVal) => total += currVal[1], 0) * 100) / 100;
 
-class CashRegister{
-  constructor(money){
-    this.cashInDrawer = money;
-    this.currChar = "$";
-  }
-  showCashInDrawer(){
-    let result = "";
-    this.cashInDrawer.map(el => result +=`${el.currecyUnit}: ${this.currChar}${el.amount} </br>`)
-    return result;
-  }
-  totalCashInDrawer(){
-    return Math.round((this.cashInDrawer.map((curr) => curr.amount).reduce((total, currentValue) => total + currentValue ,0)) * 100) / 100;
-  }
-  makeChange(cash, price){
-    let changeValue = Math.round((cash - price) * 100) / 100;
-    let result = this.checkTransaction(changeValue, price);
-    let change = {};
-    if(result){
-      return result;
-    }
-    //console.log(changeValue); //DEBUG
-    while (changeValue > 0){ 
-
-      //console.log("Change" + changeValue); //DEBUG
-      this.cashInDrawer.toReversed().find((item) => {
-        if(changeValue >= item.value && item.amount > 0){
-          change[item.name] = change[item.name] ? Math.round((change[item.name] + item.value) * 100) / 100 : item.value;
-          changeValue = Math.round((changeValue - item.value) * 100) / 100;
-          item.amount = Math.round((item.amount - item.value) * 100) / 100;     
-          //console.log(changeValue, item.amount, item.value, item.name); //DEBUG
-          return true;
-        } 
-      });
-    }
-
-    result = `Status: ${this.totalCashInDrawer() <= 0 ? "CLOSED " : "OPEN "}`;
-    if(cash !== price){
-      for(var key in change){
-        result += `${key}: ${this.currChar}${change[key]} `;
-      }
-    } else {
-      result = "No change due - customer paid with exact cash";
-    }
-    return result;   
-  }
-  checkTransaction(change, price){
-    const drawerCash = this.cashInDrawer.toReversed().filter((item) => change >= item.value).reduce((acc, currVal) => acc + currVal.amount ,0);
-    //this.cashInDrawer.toReversed().filter((item) => change >= item.value).forEach((el) => console.log(`${el.name} : ${el.amount}`));
-    //console.log(`drawerCash: ${drawerCash}, change: ${change}`); //debug
-    if (drawerCash < change){
-      return "Status: INSUFFICIENT_FUNDS";
-    }
-  }
+const update = () =>{
+    listCid();
+    totalCashInDrawerElement.textContent = "$" + totalInCid();
 }
 
-const cashregister = new CashRegister(cid.map((item, index) => new Money(curr[index][0], curr[index][1], item[0], item[1])));
-
-changeDrawerElement.innerHTML = cashregister.showCashInDrawer();
-totalCashInDrawerElement.textContent = cashregister.totalCashInDrawer();
-
-
-payBtn.addEventListener("click", ()=>{
-  
-  if(cashElement.value){
-    const payment = Number(cashElement.value);
-    if(payment < price){
-      alert("Customer does not have enough money to purchase the item")
-      return;
-    } else {
-      changeDueElement.textContent = cashregister.makeChange(payment, price);
-      changeDrawerElement.innerHTML = cashregister.showCashInDrawer();
-      totalCashInDrawerElement.textContent = cashregister.totalCashInDrawer();
+const checkEnoughMoney = (change)=>{
+    let total = 0;
+    for(let i = 0; i < curr.length; i++){
+        
+        total = curr[i][1] <= change ? cid[i][1] + total : total; 
     }
-  }
+    return Math.round(total*100)/100 >= change;
+};
+
+const cashRegisterStatus = (change) =>{
+    if(change === totalInCid()){
+        return "Status: CLOSED </br>";
+    } else if (change < totalInCid()){
+        return "Status: OPEN </br>";
+    }
+};
+
+const makeChange = (price, cash) =>{
+    let change = Math.round((cash - price) * 100) / 100;
+    const cidcopy = cid.map(item => item.map(inneritem => inneritem));
+    //console.log("->Cash: ", cash, " Change: ", change, " Price: ", price);  //DEBUG
+    //console.log(cid); //debug
+    let dueChange = cashRegisterStatus(change) + " ";
+    if(cash < price){
+        alert("Customer does not have enough money to purchase the item");
+        return;
+    } else if(change === 0){
+        return "No change due - customer paid with exact cash";
+    }
+    for(let i = curr.length-1; i >= 0; i--){
+        let amount = 0;
+        if(!checkEnoughMoney(change)){
+            cid = [];
+            cid = cidcopy.map(item => item.map(inneritem => inneritem));
+            return "Status: INSUFFICIENT_FUNDS";
+        }
+        while(change >= curr[i][1] && cid[i][1] > 0){
+            //console.log(cid[i][0],": ", cid[i][1]); //DEBUG
+            change = Math.round((change - curr[i][1]) * 100) / 100;   
+            amount = Math.round((curr[i][1] + amount) * 100) / 100 ;
+            cid[i][1] = Math.round((cid[i][1] - curr[i][1]) * 100) / 100;               
+        }
+        if(amount > 0){
+            dueChange += `${cid[i][0]}: $${amount} </br>`;
+            //console.log(change);  //DEBUG
+        }
+    }
+    //console.log(dueChange); //Debug
+    return dueChange;
+}
+
+update();
+priceElement.textContent = "$" + price;
+
+payBtn.addEventListener("click",()=>{
+    const cash = cashElement.value;
+    changeDueElement.innerHTML = makeChange(price, cash);    
+    update();  
 })
 
 //Eventlistener to trigger if you hit enter key
 cashElement.addEventListener("keypress",function(event) {
-  if (event.key === "Enter") {
-    event.preventDefault();
-    payBtn.click();
-  }
-});
+    if (event.key === "Enter") {
+      event.preventDefault();
+      payBtn.click();
+    }
+  });

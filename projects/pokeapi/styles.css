@@ -1,0 +1,368 @@
+:root{
+    --darkred:#d12429;
+    --red:#ed1c23;
+    --blue:#07aef0;
+    --white:#ffffffcf;
+    --yellow:#fff200;
+    --green:#17a650;
+    --grey:#bdbdbd;
+    --darkgrey:#434344;
+    --statsdisplay:#3ab54a;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Courier, monospace;
+    font-size: 15px;
+}
+main{
+    min-height: calc(100vh - 50px) /* you have to minus header and footer width */
+}
+footer{  
+    height: 50px;            /* calc height when limited content */
+    background-color: #E4EFE7;
+}
+.footer-content{
+    padding-left: 25px;
+}
+.title{
+    text-align:center;
+
+}
+
+.poke-body{
+    height: 890px;
+    width: 500px;
+    background-color: var(--darkred);
+    border-radius: 20px;
+    border: solid 1px black;
+    box-shadow: -10px 10px 0 #95191d;
+    margin: 0 auto;
+}
+.poke-top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 200px;
+}
+.big-circle{
+    height: 70px;
+    width: 70px;
+    background-color: var(--blue);
+    border-radius: 50%;
+    border: solid 3px black;
+    margin: 20px 0 0 20px;
+    box-shadow: 0 0 0 8px var(--white), 0 0  0 10px black;
+}
+
+.little-circles{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 85px;    
+    margin-top: 10px;
+}
+
+.little-circle-red, .little-circle-yellow, .little-circle-green{
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    border: solid 2px black;
+}
+.little-circle-red{
+    background-color: var(--red);
+}
+.little-circle-yellow{
+    background-color: var(--yellow);
+}
+.little-circle-green{
+    background-color: var(--green);
+}
+
+.display-frame{
+    background-color: var(--grey);
+    height: 565px;
+    width: 450px;
+    margin: 50px auto 0 auto;
+    border-radius: 15px 15px 15px 50px;
+    padding: 2px;
+    box-shadow: -5px 5px 0 #908f8f;
+}
+.double-dots{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 30px;  
+    margin: 5px auto;
+}
+.dot{
+    background-color: var(--red);
+    height: 9px;
+    width: 9px;
+    border-radius: 50%;
+    border: solid 2px black;
+}
+.display{
+    background-color: var(--white);
+    border: solid 2px black;
+    height: 460px;
+    width: 380px;
+    padding: 10px;
+    margin: 10px auto 0 auto;    
+    border-radius: 8px;
+    /*box-shadow: inset 0px 0px 40px 10px var(--darkgrey); */  
+}
+
+.poke-name{
+    font-size: 20px;
+    margin-top: -1px;
+}
+.image{
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+}
+.poke-type{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 25px;
+}
+.type{
+    color: var(--white);
+    height: 100%;
+    width: 80px;
+    border-radius: 6px;
+    text-align: center;
+    padding-top: 5px;
+    margin-right: 4px;
+}
+.stats-grid{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-top: 15px;    
+    gap:5px; 
+}
+.stats{
+    text-align: center;
+    padding: 3px;
+    background-color: #fd00086f;
+    border-radius: 2px;
+}
+.display-bottom-part{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 280px;
+    margin: 5px auto;
+}
+.red-dot{
+    background-color: var(--red);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: solid 2px black;
+}
+.speakers{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 70px;
+    height: 30px;
+    margin-top: 5px;
+}
+.speaker-grill{
+    border: solid 2px black;
+    border-radius: 50px;
+}
+.controls{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 15px;
+    margin-left: 60px;
+}
+.joystick{
+    background-color: var(--darkgrey);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    box-shadow: -4px 4px 0 black;
+}
+.poke-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 190px;
+    margin-left: 20px;
+}
+.button{
+    width: 85px;
+    height: 22px;
+    border-radius: 10px;
+}
+.red-button{
+    background-color: var(--red);
+    border: solid 2px #90161a;
+    box-shadow: -3px 3px #a41318;
+    background:linear-gradient(to bottom, var(--red) 5%, #a41318 100%);
+}
+.red-button:hover{
+    background:linear-gradient(to bottom, #a41318 5%, var(--red) 100%);
+}
+
+.green-button{
+    background-color: var(--green);
+    border: solid 2px #0d6731;
+    box-shadow: -3px 3px #107739;
+    background:linear-gradient(to bottom, var(--green) 5%, #107739 100%);
+}
+.green-button:hover{
+    background:linear-gradient(to bottom, #107739 5%, var(--green) 100%);
+}
+.red-button:active, .green-button:active {
+	position:relative;
+	top:1px;
+}
+
+.bottom-display{
+    background-color: var(--statsdisplay);
+    width: 200px;
+    height: 60px;
+    border-radius: 15px;
+    border: solid 3px black;
+    box-shadow: inset 0px 0px 20px 5px black;
+    padding: 10px;
+    font-size: 17px;
+    text-align: center;
+}
+.bottom-display:focus{
+    outline: none;
+}
+.bottom-display::placeholder{
+    color: var(--darkgrey);
+}
+
+/* Reset autofill styling */
+.bottom-display:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px inherit inset !important;
+    box-shadow: inset 0px 0px 20px 5px black, 0 0 0px 1000px var(--statsdisplay) inset !important;
+    background-color: var(--statsdisplay) !important; /* Ensure your custom background remains */
+    color: inherit; /* Maintain text color */
+  }
+
+.d-pad{
+    display:grid;
+    grid-template-columns: 35px 25px 35px;
+    grid-template-rows: 35px 25px 35px;
+    margin-top: -40px;
+}
+.circle{
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border: solid 2px black;
+     
+}
+.up, .right, .down, .left, .center{
+    background-color: var(--darkgrey);
+    box-shadow: -4px 4px 0 black;    
+}
+.center{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    grid-row-start: 2;
+    grid-column-start: 2;
+    z-index: 1;
+}
+.up{
+    grid-row-start: 1;
+    grid-column-start: 2;
+    border-radius: 4px 4px 0 0 ;
+}
+.right{
+    grid-row-start: 2;
+    grid-column-start: 3;
+    border-radius: 0 4px 4px 0 ;
+}
+.down{
+    grid-row-start: 3;
+    grid-column-start: 2;
+    z-index: 2;
+    border-radius: 0 0 4px 4px;
+}
+.left{
+    grid-row-start: 2;
+    grid-column-start: 1;
+    border-radius: 4px 0 0 4px;
+    z-index: 2;
+}
+.poke-bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 350px;
+    margin: 5px 80px 0 120px;
+}
+/*------Pokemon Types----------*/
+.normal{ 
+    background-color: #aaab98;
+}
+.fire{
+    background-color: #ff4524;
+}
+.water{
+    background-color: #3399ff;
+}
+.electric{
+    background-color: #ffcc33;
+}
+.grass{ 
+    background-color: #107739;
+}
+.ice{
+    background-color: #66ccff;
+}
+.fighting{
+    background-color: #ba5545;
+}
+.poison{
+    background-color: #ab559a;
+}
+.ground{
+    background-color: #debb54;
+}
+.flying{
+    background-color: #8799ff;
+}
+.psychic{
+    background-color: #ff579a;
+}
+.bug{
+    background-color: #a9ba23;
+}
+.rock{
+    background-color: #baa966;
+}
+.ghost{
+    background-color: #6666ba;
+}
+.dragon{
+    background-color: #7866ed;
+}
+.dark{
+    background-color: #7866ed;
+}
+.steel{
+    background-color: #abaabd;
+}
+.fairy{
+    background-color: #ed98ed;
+}

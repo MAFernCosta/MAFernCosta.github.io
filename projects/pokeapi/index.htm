@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
+    <title>Pokeapi</title>
+</head>
+<body>
+    <main>
+        <h1 class="title">Poke API</h1>
+        <div class="poke-body">
+            <div class="poke-top">
+                <div class="big-circle">
+                </div>
+                <div class="little-circles">
+                    <div class="little-circle-red"></div>            
+                    <div class="little-circle-yellow"></div>
+                    <div class="little-circle-green"></div>
+                </div>
+            </div>
+            <div class="display-frame">
+                <div class="double-dots">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+                <div class="display">
+                    <h2 class="poke-name">
+                        <span id="pokemon-name">-</span> 
+                        <span id="pokemon-id"></span></span>
+                    </h2>
+                    <p class="description">
+                        Weight: 
+                        <span id="weight"></span> 
+                        Height: 
+                        <span id="height"></span></p>
+                        <div id="pokemon-image" class="image"></div>
+                        <div id="types" class="poke-type"></div>
+                        <div class="stats-grid">
+                            <div class="stats">Base</div>
+                            <div class="stats">Stats</div>
+                            <div class="stats">HP:</div>
+                            <div id="hp" class="stats"></div>
+                            <div class="stats">Attack:</div>
+                            <div id="attack" class="stats"></div>
+                            <div class="stats">Defense:</div>
+                            <div id="defense" class="stats"></div>
+                            <div class="stats">Sp.Attack:</div>
+                            <div id="special-attack" class="stats"></div>
+                            <div class="stats">Sp.Defense:</div>
+                            <div id="special-defense" class="stats"></div>
+                            <div class="stats">Speed:</div>
+                            <div id="speed" class="stats"></div>
+                        </div>
+
+                </div>
+                <div class="display-bottom-part">
+                    <div class="red-dot"></div>
+                    <div class="speakers">
+                        <div class="speaker-grill"></div>
+                        <div class="speaker-grill"></div>
+                        <div class="speaker-grill"></div>
+                        <div class="speaker-grill"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="controls">
+                <div class="joystick"></div>
+                <div class="poke-buttons">
+                    <button id="random-button" class="button red-button">Random</button>
+                    <button id="search-button" class="button green-button">Seacrch</button>
+                </div>           
+            </div>
+            <div class="poke-bottom">
+                <input id="search-input" type="text" class="bottom-display" placeholder="Name or pokemon id">
+                
+                    <div class="d-pad">
+                    <div class="center">
+                    <div class="center-circle">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+                <div class="up"></div>
+                <div class="right"></div>
+                <div class="down"></div>
+                <div class="left"></div>
+            </div>
+            </div>        
+        </div>
+        <script src="script.js"></script>
+    </main>
+    <footer>
+        <span class="footer-content">Miguel Costa 21-12-24</span>
+    </footer>
+</body>
+</html>

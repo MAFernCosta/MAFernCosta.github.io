@@ -18,11 +18,10 @@ body{
     font-family: Courier, monospace;
     font-size: 15px;
 }
-main{
-    min-height: calc(100vh - 50px) /* you have to minus header and footer width */
-}
+
 footer{  
-    height: 50px;            /* calc height when limited content */
+    margin-top: 30px;
+    height: 15x;            /* calc height when limited content */
     background-color: #E4EFE7;
 }
 .footer-content{
@@ -30,12 +29,13 @@ footer{
 }
 .title{
     text-align:center;
-
 }
 
 .poke-body{
-    height: 890px;
-    width: 500px;
+    max-height: 890px;
+    height: 90vh;
+    max-width: 500px;
+    width: 70vw;
     background-color: var(--darkred);
     border-radius: 20px;
     border: solid 1px black;
@@ -46,7 +46,7 @@ footer{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 200px;
+    width: 25vw;
 }
 .big-circle{
     height: 70px;
@@ -84,8 +84,10 @@ footer{
 
 .display-frame{
     background-color: var(--grey);
-    height: 565px;
-    width: 450px;
+    max-height: 500px;
+    height: 70vh;
+    max-width: 450px;
+    width: 60vw;
     margin: 50px auto 0 auto;
     border-radius: 15px 15px 15px 50px;
     padding: 2px;
@@ -108,8 +110,9 @@ footer{
 .display{
     background-color: var(--white);
     border: solid 2px black;
-    height: 460px;
-    width: 380px;
+    height: 400px;
+    max-width: 380px;
+    width: 50vw;
     padding: 10px;
     margin: 10px auto 0 auto;    
     border-radius: 8px;
@@ -117,14 +120,16 @@ footer{
 }
 
 .poke-name{
-    font-size: 20px;
+    font-size: 1.3rem;
     margin-top: -1px;
 }
 .image{
     display: block;
     margin: 0 auto;
-    width: 150px;
-    height: 150px;
+    max-width: 130px;
+    width: 90%;
+    height: 90%;
+    height: 130px;
 }
 .poke-type{
     display: flex;
@@ -146,12 +151,14 @@ footer{
     grid-template-columns: auto auto;
     margin-top: 15px;    
     gap:5px; 
+    
 }
 .stats{
     text-align: center;
     padding: 3px;
     background-color: #fd00086f;
     border-radius: 2px;
+    
 }
 .display-bottom-part{
     display: flex;
@@ -232,7 +239,8 @@ footer{
 
 .bottom-display{
     background-color: var(--statsdisplay);
-    width: 200px;
+    max-width: 200px;
+    width: 55vw;
     height: 60px;
     border-radius: 15px;
     border: solid 3px black;
@@ -308,7 +316,8 @@ footer{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 350px;
+    max-width: 350px;
+    width: 51vw;
     margin: 5px 80px 0 120px;
 }
 /*------Pokemon Types----------*/
@@ -365,4 +374,10 @@ footer{
 }
 .fairy{
     background-color: #ed98ed;
+}
+@media(max-width: 600px)
+{
+    .poke-body{
+        margin: none;
+    }
 }

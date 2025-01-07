@@ -87,3 +87,4 @@ searchInput.addEventListener("keypress",function(event) {
   });
 
 randomBtn.addEventListener("click", randomPokemon);
+

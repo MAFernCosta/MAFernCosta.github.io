@@ -109,10 +109,19 @@
     padding-top:50px;
   }
 
+  .project-tile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.7rem;
+  }
+
   .project-title{
     display:block;
     font-size:1.3rem;
-    
+    padding-bottom: 0.5rem;
+
   }
   
   .projects-gallery > a{
@@ -124,12 +133,13 @@
 
   .projects-gallery > a:hover{
     color:var(--main-jellybeanblue);
+    filter: contrast(90%); /* Makes the whole link darker */
   }
 
   .project-image{
     width: 100%;
     object-fit: cover;
-    max-width: 350px;
+    width: 350px;
     height: 280px;
   }
 
@@ -137,7 +147,7 @@
     display: block;
     max-width: 300px;
     font-size:1rem;
-    margin: 0 auto 0.5rem auto;
+    margin-top: 0.8rem;
   }
 
   /*Contact Section*/

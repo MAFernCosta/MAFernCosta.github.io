@@ -11,10 +11,10 @@
     scroll-behavior: smooth;
   }
   body{
-    font-family: poppins, sans-serif;
-    font-size:1.1rem;
-    line-height:1.5;
-    background-color:var(--main-mineshaft);
+    /*font-family: poppins, sans-serif;*/
+    /*font-size:1.1rem;*/
+    /*line-height:1.5;*/
+    
   }
   .tile{
     width: 350px;
@@ -23,4 +23,15 @@
     object-fit: contain;
     width: 350px;
     height: 180px;    
+  }
+  .navbar-spacing{
+    padding-top: 50px;
+  }
+
+  .description{
+    min-height: 90px;
+  }
+
+  .date{
+    min-height: 30px;
   }

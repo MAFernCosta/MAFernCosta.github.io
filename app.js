@@ -41,11 +41,13 @@ fetch('./projects/projects.json')
             <div class="card-body">
               <h5 class="card-title">${title}</h5>
               <img src="${image}" alt="" class="border card-img tile-img">
-              <p class="card-text py-2">
-                ${description}
+              
+              <p class="card-text py-2 description">
+                  ${description}
               </p>
-              <p class="card-text text-body-secondary pb-2"> <small> ${date ? "Date: " + date : ""}</small></p>
-              ${demo ? '<a href="' + demo +'" class="btn btn-secondary"><i class="bi bi-play-fill"></i> Live</a>' : ""}
+              <p class="card-text text-body-secondary pb-2 date"> <small> ${date ? "Date: " + date : "Date:-"}</small></p>
+              
+              ${demo ? '<a href="' + demo +'" class="btn btn-secondary"><i class="bi bi-play-fill"></i> Demo</a>' : ""}
               ${github ? '<a href="' + github +'" class="btn btn-secondary"><i class="bi bi-github"></i> GitHub</a>' : ""}
               
             </div>

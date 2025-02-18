@@ -1,0 +1,77 @@
+
+[
+    {
+      "title": "Random Quote Machine",
+      "description": "Random Quote Machine is a React app that displays random quotes with Bootstrap for responsive design.",
+      "image": "projects/random-quote-machine/preview.png",
+      "demo": "https://maferncosta.github.io/random-quote-machine/",
+      "github":"https://github.com/MAFernCosta/random-quote-machine",
+      "date": "08/02/25",
+      "tags": ["React", "Bootstrap"]
+    },
+    {
+      "title": "Poke API",
+      "description": "A web app similar to a Pokédex that fetches and displays Pokémon information using an API, searchable by name or ID.",
+      "image": "projects/pokeapi/preview.png",
+      "demo": "projects/pokeapi/index.htm",
+      "date": "21/12/24",
+      "tags": ["JavaScript", "API", "CSS"]
+    },
+    {
+      "title": "Cash register",
+      "description": "A cash register that gives change based on the available coins and bills in the drawer.",
+      "image": "projects/cash-register/preview.png",
+      "demo": "projects/cash-register/index.htm",
+      "date":"",
+      "tags": ["JavaScript", "CSS"]
+    },
+    {
+      "title": "Cash register",
+      "description": "A cash register that gives change based on the available coins and bills in the drawer.",
+      "image": "projects/roman-numeral-converter/preview.png",
+      "demo": "projects/roman-numeral-converter/index.htm",
+      "date":"",
+      "tags": ["JavaScript", "CSS"]
+    },
+    {
+      "title": "Roman Numeral Converter",
+      "description": "This project demonstrates the use of JavaScript and recursion.",
+      "image": "projects/cash-register/preview.png",
+      "demo": "projects/cash-register/index.htm",
+      "date":"",
+      "tags": ["JavaScript", "CSS"]
+    },
+    {
+      "title": "Simple lists",
+      "description": "It's like a to-do list, but you can use it to organize and list anything you want.",
+      "image": "projects/simple-lists/preview.png",
+      "github": "https://github.com/MAFernCosta/Simple-lists",
+      "date":"",
+      "tags": ["JavaScript", "CSS"]
+    },
+    {
+      "title": "Palindrome checker",
+      "description": "This is my first project using JavaScript and it is a Palindrome Checker.",
+      "image": "projects/Palindrome-checker/preview.png",
+      "demo": "projects/Palindrome-checker/index.html",
+      "date":"",
+      "tags": ["JavaScript", "CSS"]
+    },
+    {
+      "title": "Aquilino Ribeiro Tribute Page",
+      "description": "This is an HTML tribute page.",
+      "image": "projects/aquilino_ribeiro-tribute_page/preview.png",
+      "demo": "projects/aquilino_ribeiro-tribute_page/index.html",
+      "date":"",
+      "tags": ["HTML", "CSS"]
+    },
+    {
+      "title": "Survey form",
+      "description": "This is my first project using HTML and Forms.",
+      "image": "projects/Survey-form/preview.png",
+      "demo": "pprojects/Survey-form/index.html",
+      "date":"",
+      "tags": ["HTML", "CSS"]
+    }
+  ]
+  

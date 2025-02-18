@@ -1,237 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="This is a personal Portfolio" />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="This is a personal Portfolio" />
+  <link href="styles.css" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="
+    https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css
+    " rel="stylesheet">
     <title>Miguel Costa - Portfolio</title>
-    <link rel="stylesheet" href="styles.css" />
-     <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-    />
-  </head>
-  <body>
-    <!-- Header -->
-    <div class="hcontainer">
-      <div id="header">
-        <img id="logo" src="https://miguelcosta.xyz/wp-content/uploads/2022/11/logowhite-100x45.png" alt="Miguel Costa logo"
-          loading="lazy" />
-        <!-- Navigation -->
-        <nav id="navbar">
-          <ul>
-            <li><a href="#welcome-section">About</a></li>
-            <li><a href="#projects">My Work</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar fixed-top navbar-expand-md bg-body-tertiary border-bottom">
+    <div class="container">
+      <a class="navbar-brand" href="#">Miguel Costa</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <!-- <a class="nav-link" href="#about">About</a>  Maybe in the future -->
+          <a class="nav-link" href="#my-projects">My Projects</a>
+          <a class="nav-link" href="#contact">Contact</a>
+        </div>
       </div>
     </div>
-    <!-- Welcome Section or about -->
-    <section id="welcome-section" class="welcome-section">
-      <h1>Hello I am Miguel Costa</h1>
-      <p>a Web developer</p>
-    </section>
-    <section id="projects">
-      <h2>My Projects</h2>
-      <div class="projects-gallery">
-        <!-- Put here your projects to display -->
-         <!-- project Random Quote Machine 8/02/25 -->
-        <a 
-        class="project-tile" 
-        target="_blank"
-        href="https://maferncosta.github.io/random-quote-machine"
-        >
-        <span class="project-title">Random Quote Machine</span>
-       
-        <img 
-        src="projects/random-quote-machine/preview.png"
-        alt="project"
-        class="project-image"
-        >
-        <span class="project-description">Random Quote Machine is a React app that displays random quotes with Bootstrap for responsive design."</span>
-        </a>
-         <!-- project PokeAPI 21/12/24 -->
-        <a 
-        class="project-tile" 
-        target="_blank"
-        href="projects/pokeapi/index.htm"
-        >
-        <span class="project-title">Poke API</span>
-       
-        <img 
-        src="projects/pokeapi/preview.png"
-        alt="project"
-        class="project-image"
-        >
-        <span class="project-description">A web app similar to a Pokédex that fetches and displays Pokémon information using an API, searchable by name or ID.</span>
-        </a>
-         <!-- project Cash Register -->
-        <a 
-        class="project-tile" 
-        target="_blank"
-        href="projects/cash-register/index.htm"
-        >
-        <span class="project-title">Cash register</span>
-       
-        <img 
-        src="projects/cash-register/preview.png"
-        alt="project"
-        class="project-image"
-        >
-        <span class="project-description">A cash register that gives change based on the available coins and bills in the drawer.</span>
-        </a>
-        <!-- project Roman Numeral Converter -->
-        <a 
-        class="project-tile" 
-        target="_blank"
-        href="projects/roman-numeral-converter/index.html"
-        >
-        <span class="project-title">Roman Numeral Converter</span>
-       
-        <img 
-        src="projects/roman-numeral-converter/preview.png"
-        alt="project"
-        class="project-image"
-        >
-        <span class="project-description">This project demonstrates the use of JavaScript and recursion.</span>
-        </a>
-         <!-- project Simple list -->
-         <a 
-         class="project-tile" 
-         target="_blank"
-         href="https://github.com/MAFernCosta/Simple-lists"
-         >
-         <span class="project-title">Simple lists</span>
-        
-         <img 
-         src="projects/simple-lists/preview.png"
-         alt="project"
-         class="project-image"
-         >
-         <span class="project-description">It's like a to-do list, but you can use it to organize and list anything you want.</span>
-         </a>
-         <!-- project Palindrome-checker -->
-        <a 
-        class="project-tile" 
-        target="_blank"
-        href="projects/Palindrome-checker/index.html"
-        >
-        <span class="project-title">Palindrome checker</span>
-       
-        <img 
-        src="projects/Palindrome-checker/preview.png"
-        alt="project"
-        class="project-image"
-        >
-        <span class="project-description">
-        This is my first project using JavaScript and it is a Palindrome Checker.</span>
-        </a>
-        <!-- project Aquilino Ribeiro Tribute Page -->
-        <a 
-        class="project-tile" 
-        target="_blank"
-        href="projects/aquilino_ribeiro-tribute_page/index.html"
-        >
-        <span class="project-title">Aquilino Ribeiro Tribute Page</span>
-       
-        <img 
-        src="projects/aquilino_ribeiro-tribute_page/preview.png"
-        alt="project"
-        class="project-image"
-        >
-        <span class="project-description">
-        This is an HTML tribute page.</span>
-        </a>
-         <!-- project Survey form -->
-        <a 
-        class="project-tile" 
-        target="_blank"
-        href="projects/Survey-form/index.html"
-        >
-        <span class="project-title">Survey form</span>
-       
-        <img 
-        src="projects/Survey-form/preview.png"
-        alt="project"
-        class="project-image"
-        >
-        <span class="project-description">
-        This is my first project using HTML and Forms.</span>
-        </a>
-        
-        
-       
-        
-        
+  </nav>
+  <!-- Hero -->
+    <section class="container-fluid d-flex justify-content-center align-items-center vh-100 border-bottom">
+      <div class="text-center">
+        <h1>Hello i am Miguel Costa</h1>
+        <h2 class="text-secondary">a web developer</h2>
       </div>
     </section>
-    <section id="contact">
-      <h1>Let's meet</h1>
-      <div class="socials">
+    <!-- My Projects Section -->
+    <section id="my-projects" class="container-fluid border-bottom">
+      <div class="container">
+        <h2 class="text-center my-5">My Projects</h2>
+        <div class="d-flex flex-row justify-content-center flex-wrap gap-4 mb-5" id="projects-container">
+          
         
-        <!-- Add facebook profile later.
-        <a 
-        target="_black"
-        href="#"
-        >
-        <i class="fab fa-facebook-f"></i> Facebook
-        
-        </a>
-         -->
-        <!-- Linkedin profile -->
-        <a 
-        target="_blank"
-        href="https://www.linkedin.com/in/miguel-costa-0b8611298/"
-        >
-        <i class="fab fa-linkedin"></i> LinkedIn
-        </a>
-
-        <!-- freeCodeCamp profile -->
-        <a 
-        target="_blank"
-        href="https://www.freecodecamp.org/fcc540b9a6b-1608-4da1-9f53-5f6c2432016e"
-        >
-        <i class="fab fa-free-code-camp"></i> freeCodeCamp
-        </a>
-
-        <!-- Github -->
-        <a 
-        target="_blank"
-        href="https://github.com/MAFernCosta"
-        >
-        <i class="fab fa-github"></i> GitHub
-        </a>
-        
-        <!-- Twitter -->
-        <a 
-        target="_blank"
-        href="https://x.com/MAFernCosta"
-        >
-        <i class="fab fa-twitter"></i> Twitter
-        </a>
-
-        <!-- EMAIL Add email later
-        <i class="fa fa-envelope"></i></i> Email
-        </a>
-       <a 
-        target="_blank"
-        href="#"
-        >
-        -->
-         <!-- Phone also later maybe.
-        <i class="fa fa-phone"></i> Call me
-        </a>
-    -->
+        </div>
+        <nav aria-label="Projects Navigation" class="d-flex justify-content-center" id="projects-nav">
+        </nav>
       </div>
     </section>
-    <footer>
-      <span>Miguel Costa 2024</span>
-      <span>This webpage is one of my projects <br/>check it out on my 
-        <a 
-        target="_blank" 
-        href="https://github.com/MAFernCosta/MAFernCosta.github.io"> 
-        GitHub</a> page.</span>
-    </footer>
-  </body>
+    <!-- Contact Section -->
+    <section id="contact" class="container-fluid border-bottom ">
+      <h2 class="text-center my-5">Contact</h2>
+      <div class="d-flex justify-content-center align-items-center">
+        
+        <div class="text-center">
+            <h1 class="py-4">Let's meet</h1>
+            <div class="d-flex flex-row justify-content-center fs-5 link-underline-opacity-0">
+              <a href="" class="link-secondary me-2"><i class="bi bi-linkedin"></i> LinkdIn</a>
+              <a href="" class="link-secondary me-2"><i class="bi bi-file-earmark-code-fill"></i> freeCodeCamp</a>
+              <a href="" class="link-secondary me-2"><i class="bi bi-github"></i> gitHub</a>
+              <a href="" class="link-secondary me-2"><i class="bi bi-twitter-x"></i>Twitter</a>
+              
+            </div>
+            <h1 class="my-5"></h1>
+          
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+     <footer class="bg-body-tertiary text-center p-1 pt-4">
+      <p>&copy;2025 Created by Miguel Costa. All rights reserved.</p>
+     </footer>
+     <!-- Back to top button -->
+      <button class="btn fs-4 btn-secondary position-fixed bottom-0 end-0 translate-middle d-none" id="back-up" onclick="scrollBacktoTop()"><i class="bi bi-arrow-up-square"></i></button>
+  <!-- Bootstrap -->
+   <script src="app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
